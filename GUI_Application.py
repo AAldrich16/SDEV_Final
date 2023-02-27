@@ -30,20 +30,30 @@ class App:
 
         ## Creating the Panel [Tab 2]
         self.form_tab = tk.Frame(self.notebook)
+        
+        ## Bot Nick Label and Input
         self.nick_label = ttk.Label(self.form_tab, text="Bot Nick")
         self.nick_label.pack(pady=10)
         self.nick_entry = ttk.Entry(self.form_tab)
         self.nick_entry.pack(pady=5)
+        
+        ## Bot Avatar Label and Input
         self.avatar_label = ttk.Label(self.form_tab, text="Avatar")
         self.avatar_label.pack(pady=10)
         self.avatar_entry = ttk.Entry(self.form_tab)
         self.avatar_entry.pack(pady=5)
+        
+        ## Bot Room Label and Input
         self.room_label = ttk.Label(self.form_tab, text="Room")
         self.room_label.pack(pady=10)
         self.room_entry = ttk.Entry(self.form_tab)
         self.room_entry.pack(pady=5)
+        
+        ## Bot Moderation Checkbox
         self.moderation = ttk.Checkbutton(self.form_tab, text='Moderation', onvalue=1, offvalue=0)
         self.moderation.pack()
+        
+        ## Submit Button
         self.edit_button = ttk.Button(self.form_tab, text="Edit")
         self.edit_button.pack(pady=20, padx=20)
         self.fill_form()
